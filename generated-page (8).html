@@ -1,0 +1,674 @@
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Roy Ben Aviv - Full-Stack Developer</title>
+    <meta
+      name="description"
+      content="Portfolio of Roy Ben Aviv, a Full-Stack Developer specializing in modern web applications, e-commerce, and AI integration." />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;display=swap"
+      rel="stylesheet" />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #050505;
+        background-image:
+          radial-gradient(circle at 15% 50%, rgba(79, 70, 229, 0.08) 0%, transparent 25%),
+          radial-gradient(circle at 85% 30%, rgba(124, 58, 237, 0.08) 0%, transparent 25%);
+        color: #d4d4d4;
+      }
+
+      /* Premium Scrollbar */
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #0a0a0a;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #333;
+        border-radius: 3px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #444;
+      }
+
+      /* Glass Effects */
+      .glass-panel {
+        background: rgba(10, 10, 10, 0.6);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .glass-card {
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        transition: all 0.3s ease;
+      }
+
+      .glass-card:hover {
+        border-color: rgba(255, 255, 255, 0.15);
+        background: rgba(255, 255, 255, 0.05);
+        transform: translateY(-2px);
+      }
+
+      .shimmer-bg {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(45deg, transparent 40%, rgba(255, 255, 255, 0.03) 45%, transparent 50%);
+        background-size: 200% 200%;
+        animation: shimmer 6s infinite;
+        pointer-events: none;
+      }
+
+      @keyframes shimmer {
+        0% {
+          background-position: 200% 0;
+        }
+        100% {
+          background-position: -200% 0;
+        }
+      }
+
+      /* --- Scroll Reveal Animations --- */
+      .reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+      }
+
+      .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+  </head>
+  <body class="min-h-screen flex flex-col items-center p-4 selection:bg-indigo-500/30 selection:text-white">
+    <main class="w-full max-w-6xl glass-panel rounded-[2rem] overflow-hidden shadow-2xl relative">
+      <nav class="sticky top-0 z-50 border-b border-white/5 bg-neutral-950/80 backdrop-blur-xl">
+        <div class="px-6 md:px-10 py-4 flex items-center justify-between">
+          <a href="#" class="group flex items-center gap-3">
+            <div
+              class="w-8 h-8 rounded-lg bg-white flex items-center justify-center text-black text-xs font-semibold tracking-tighter group-hover:scale-105 transition-transform">
+              RB
+            </div>
+            <div class="flex flex-col">
+              <span class="text-white text-sm font-medium tracking-tight leading-none">Roy Ben Aviv</span>
+              <span class="text-[10px] text-neutral-500 uppercase tracking-wide pt-1">Full-Stack Developer</span>
+            </div>
+          </a>
+
+          <div class="hidden md:flex items-center gap-8 text-sm font-medium text-neutral-400">
+            <a href="#about" class="hover:text-white transition-colors">About</a>
+            <a href="#specialties" class="hover:text-white transition-colors">Specialties</a>
+            <a href="#stack" class="hover:text-white transition-colors">Tech Stack</a>
+            <a href="#projects" class="hover:text-white transition-colors">Projects</a>
+          </div>
+
+          <a
+            href="#contact"
+            class="hidden md:flex items-center gap-2 text-xs font-medium bg-white text-black hover:bg-neutral-200 border border-transparent px-4 py-2 rounded-full transition-all">
+            <span>Contact Me</span>
+            <iconify-icon icon="lucide:arrow-right" width="14" stroke-width="2"></iconify-icon>
+          </a>
+
+          <button class="md:hidden text-white p-2">
+            <iconify-icon icon="lucide:menu" width="24"></iconify-icon>
+          </button>
+        </div>
+      </nav>
+
+      <section class="relative pt-24 pb-20 px-6 md:px-12 lg:px-20 overflow-hidden">
+        <div
+          class="absolute top-0 right-0 w-[600px] h-[600px] bg-indigo-500/10 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/3 pointer-events-none"></div>
+
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center relative z-10">
+          <div class="space-y-8 order-2 lg:order-1 reveal">
+            <div
+              class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-medium text-emerald-400">
+              <span class="relative flex h-2 w-2">
+                <span
+                  class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+              </span>
+              Available for new projects
+            </div>
+
+            <div class="space-y-4">
+              <h1 class="text-5xl md:text-7xl font-medium text-white tracking-tight leading-[1.1]">
+                Building Scalable <br />
+                <span class="text-neutral-500">Digital Products.</span>
+              </h1>
+              <p class="text-lg text-neutral-400 max-w-lg font-light leading-relaxed">
+                I'm Roy Ben Aviv, a Full-Stack Developer with 4+ years of experience. I bridge the gap between strict
+                logic and fluid creativity to build high-performance web applications.
+              </p>
+            </div>
+
+            <div class="flex flex-wrap gap-4 pt-2">
+              <a
+                href="mailto:roybenavivv@gmail.com"
+                class="px-6 py-3 bg-white text-black font-medium rounded-full text-sm hover:bg-neutral-200 transition-colors flex items-center gap-2">
+                <iconify-icon icon="lucide:mail" width="16"></iconify-icon>
+                Email Me
+              </a>
+              <a
+                href="https://github.com/roybenaviv"
+                target="_blank"
+                class="px-6 py-3 bg-white/5 border border-white/10 text-white font-medium rounded-full text-sm hover:bg-white/10 transition-colors flex items-center gap-2">
+                <iconify-icon icon="lucide:github" width="16"></iconify-icon>
+                GitHub
+              </a>
+              <a
+                href="https:/linkedin.com/in/roy-ben-aviv"
+                target="_blank"
+                class="px-6 py-3 bg-white/5 border border-white/10 text-white font-medium rounded-full text-sm hover:bg-white/10 transition-colors flex items-center gap-2">
+                <iconify-icon icon="lucide:linkedin" width="16"></iconify-icon>
+                LinkedIn
+              </a>
+            </div>
+
+            <div class="flex items-center gap-6 pt-6 border-t border-white/5 text-xs text-neutral-500 font-mono">
+              <div class="flex items-center gap-2">
+                <iconify-icon icon="lucide:map-pin" class="text-neutral-400"></iconify-icon>
+                Israel (EU Citizenship)
+              </div>
+              <div class="flex items-center gap-2">
+                <iconify-icon icon="lucide:globe" class="text-neutral-400"></iconify-icon>
+                Currently Available
+              </div>
+            </div>
+          </div>
+
+          <div class="relative group order-1 lg:order-2 reveal" style="transition-delay: 200ms">
+            <div
+              class="absolute inset-0 bg-gradient-to-tr from-indigo-500/20 to-purple-500/20 rounded-3xl blur-2xl group-hover:blur-3xl transition-all duration-700 opacity-60"></div>
+            <div
+              class="relative aspect-[4/5] md:aspect-square rounded-3xl overflow-hidden border border-white/10 bg-neutral-900/50 shadow-2xl">
+              <img
+                src="https://avatars.githubusercontent.com/u/91695939?v=4"
+                alt="Roy Ben Aviv"
+                class="object-cover w-full h-full opacity-90 group-hover:scale-105 transition-transform duration-700 scale hover:scale-0" />
+              <div class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/90 to-transparent">
+                <div
+                  class="glass-panel p-3 rounded-xl border border-white/10 flex items-center justify-between backdrop-blur-md">
+                  <div>
+                    <p class="text-white text-xs font-semibold">Roy Ben Aviv</p>
+                    <p class="text-[10px] text-neutral-400">Full-Stack Developer</p>
+                  </div>
+                  <div class="h-8 w-8 rounded-lg bg-indigo-500/20 flex items-center justify-center text-indigo-400">
+                    <iconify-icon icon="lucide:code-2" width="16"></iconify-icon>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="px-6 md:px-12 lg:px-20 py-20 border-t border-white/5 bg-white/[0.02]">
+        <div class="max-w-3xl mx-auto text-center space-y-6 reveal">
+          <h2 class="text-2xl font-medium text-white tracking-tight">Professional Summary</h2>
+          <p class="text-neutral-400 leading-relaxed font-light text-base md:text-lg">
+            Full-Stack Developer with 4+ years of experience building modern, scalable, and high-performance web
+            applications. Experienced in taking products from concept to production, optimizing performance, and
+            creating clean, maintainable code. Strong problem-solver with a passion for modern UI/UX, automation, and
+            emerging technologies.
+          </p>
+        </div>
+      </section>
+
+      <section id="specialties" class="px-6 md:px-12 lg:px-20 py-20 border-t border-white/5">
+        <div class="mb-12 reveal">
+          <h2 class="text-2xl font-medium text-white tracking-tight mb-2">Core Specialties</h2>
+          <p class="text-sm text-neutral-400">Areas where I deliver the most value.</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="glass-card p-8 rounded-2xl relative overflow-hidden group reveal" style="transition-delay: 100ms">
+            <div class="shimmer-bg opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+            <div class="relative z-10 space-y-4">
+              <div
+                class="w-12 h-12 rounded-xl bg-purple-500/10 flex items-center justify-center text-purple-400 border border-purple-500/20">
+                <iconify-icon icon="lucide:shopping-bag" width="24" stroke-width="1.5"></iconify-icon>
+              </div>
+              <h3 class="text-white font-medium text-lg">E-Commerce Development</h3>
+              <p class="text-sm text-neutral-400 leading-relaxed">
+                Specializing in high-converting online stores. Expertise in platform customization, payment gateway
+                integration, and optimizing user flows for maximum sales.
+              </p>
+            </div>
+          </div>
+
+          <div class="glass-card p-8 rounded-2xl relative overflow-hidden group reveal" style="transition-delay: 200ms">
+            <div class="shimmer-bg opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+            <div class="relative z-10 space-y-4">
+              <div
+                class="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-400 border border-blue-500/20">
+                <iconify-icon icon="lucide:smartphone" width="24" stroke-width="1.5"></iconify-icon>
+              </div>
+              <h3 class="text-white font-medium text-lg">Responsive &amp; Pixel-Perfect</h3>
+              <p class="text-sm text-neutral-400 leading-relaxed">
+                Specialized in fully responsive, mobile-first websites with a strong eye for detail. Deep understanding
+                of UI/UX concepts, WCAG accessibility, and modern design systems.
+              </p>
+            </div>
+          </div>
+
+          <div class="glass-card p-8 rounded-2xl relative overflow-hidden group reveal" style="transition-delay: 300ms">
+            <div class="shimmer-bg opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+            <div class="relative z-10 space-y-4">
+              <div
+                class="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-400 border border-emerald-500/20">
+                <iconify-icon icon="lucide:layers" width="24" stroke-width="1.5"></iconify-icon>
+              </div>
+              <h3 class="text-white font-medium text-lg">Full-Stack Architecture</h3>
+              <p class="text-sm text-neutral-400 leading-relaxed">
+                End-to-end development from frontend interfaces to backend logic, APIs, and databases. Focused on
+                performance, scalability, and clean component-driven architecture.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="stack" class="px-6 md:px-12 lg:px-20 py-20 border-t border-white/5 bg-black/20">
+        <div class="mb-12 reveal">
+          <h2 class="text-2xl font-medium text-white tracking-tight mb-2">Technology Stack</h2>
+          <p class="text-sm text-neutral-400">My toolkit for building digital products.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="glass-card p-6 rounded-2xl border border-white/5 reveal" style="transition-delay: 100ms">
+            <div class="flex items-center gap-3 mb-6 pb-4 border-b border-white/5">
+              <iconify-icon icon="lucide:monitor" class="text-indigo-400" width="20"></iconify-icon>
+              <h3 class="text-white font-medium text-sm">Frontend Engineering</h3>
+            </div>
+            <ul class="space-y-3">
+              <li class="flex items-center justify-between text-xs text-neutral-300">
+                <span class="flex items-center gap-2"
+                  ><iconify-icon icon="logos:react" width="14"></iconify-icon> React &amp; React Native</span
+                >
+                <span class="text-neutral-500">Advanced</span>
+              </li>
+              <li class="flex items-center justify-between text-xs text-neutral-300">
+                <span class="flex items-center gap-2"
+                  ><iconify-icon icon="logos:nextjs-icon" width="14" class="invert"></iconify-icon> Next.js</span
+                >
+                <span class="text-neutral-500">SSR/SSG</span>
+              </li>
+              <li class="flex items-center justify-between text-xs text-neutral-300">
+                <span class="flex items-center gap-2"
+                  ><iconify-icon icon="logos:typescript-icon" width="14"></iconify-icon> TypeScript</span
+                >
+                <span class="text-neutral-500">Strict Types</span>
+              </li>
+              <li class="flex items-center justify-between text-xs text-neutral-300">
+                <span class="flex items-center gap-2"
+                  ><iconify-icon icon="logos:vue" width="14"></iconify-icon> Vue 3</span
+                >
+                <span class="text-neutral-500">Composition API</span>
+              </li>
+              <li class="flex items-center justify-between text-xs text-neutral-300">
+                <span class="flex items-center gap-2"
+                  ><iconify-icon icon="logos:tailwindcss-icon" width="14"></iconify-icon> Tailwind CSS</span
+                >
+                <span class="text-neutral-500">Design Systems</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="glass-card p-6 rounded-2xl border border-white/5 reveal" style="transition-delay: 200ms">
+            <div class="flex items-center gap-3 mb-6 pb-4 border-b border-white/5">
+              <iconify-icon icon="lucide:server" class="text-rose-400" width="20"></iconify-icon>
+              <h3 class="text-white font-medium text-sm">Backend &amp; Data</h3>
+            </div>
+            <ul class="space-y-3">
+              <li class="flex items-center justify-between text-xs text-neutral-300">
+                <span class="flex items-center gap-2"
+                  ><iconify-icon icon="logos:nodejs-icon" width="14"></iconify-icon> Node.js / Express</span
+                >
+              </li>
+              <li class="flex items-center justify-between text-xs text-neutral-300">
+                <span class="flex items-center gap-2"
+                  ><iconify-icon icon="logos:postgresql" width="14"></iconify-icon> PostgreSQL / MySQL</span
+                >
+              </li>
+              <li class="flex items-center justify-between text-xs text-neutral-300">
+                <span class="flex items-center gap-2"
+                  ><iconify-icon icon="logos:mongodb-icon" width="14" height="14"></iconify-icon> MongoDB /
+                  Mongoose</span
+                >
+              </li>
+              <li class="flex items-center justify-between text-xs text-neutral-300">
+                <span class="flex items-center gap-2"
+                  ><iconify-icon icon="logos:firebase" width="14"></iconify-icon> Firebase / Supabase</span
+                >
+              </li>
+              <li class="flex items-center justify-between text-xs text-neutral-300">
+                <span class="flex items-center gap-2"
+                  ><iconify-icon icon="lucide:key" width="14" class="text-yellow-500"></iconify-icon> JWT &amp;
+                  OAuth</span
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="glass-card p-6 rounded-2xl border border-white/5 reveal" style="transition-delay: 300ms">
+            <div class="flex items-center gap-3 mb-6 pb-4 border-b border-white/5">
+              <iconify-icon icon="lucide:bot" class="text-emerald-400" width="20"></iconify-icon>
+              <h3 class="text-white font-medium text-sm">AI, Automation &amp; Tools</h3>
+            </div>
+            <ul class="space-y-3">
+              <li class="flex items-center justify-between text-xs text-neutral-300">
+                <span class="flex items-center gap-2"
+                  ><iconify-icon icon="simple-icons:n8n" width="14"></iconify-icon> n8n Workflows</span
+                >
+              </li>
+              <li class="flex items-center justify-between text-xs text-neutral-300">
+                <span class="flex items-center gap-2"
+                  ><iconify-icon icon="lucide:brain-circuit" width="14"></iconify-icon> AI API Integration</span
+                >
+              </li>
+              <li class="flex items-center justify-between text-xs text-neutral-300">
+                <span class="flex items-center gap-2"
+                  ><iconify-icon icon="lucide:git-branch" width="14"></iconify-icon> Git &amp; GitHub</span
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="glass-card p-6 rounded-2xl border border-white/5 reveal" style="transition-delay: 400ms">
+            <div class="flex items-center gap-3 mb-6 pb-4 border-b border-white/5">
+              <iconify-icon icon="lucide:shopping-cart" class="text-orange-400" width="20"></iconify-icon>
+              <h3 class="text-white font-medium text-sm">E-Commerce &amp; SEO</h3>
+            </div>
+            <ul class="space-y-3">
+              <li class="flex items-center justify-between text-xs text-neutral-300">
+                <span class="flex items-center gap-2"
+                  ><iconify-icon icon="logos:shopify" width="14"></iconify-icon> Shopify</span
+                >
+                <span class="text-neutral-500">Liquid / Themes</span>
+              </li>
+              <li class="flex items-center justify-between text-xs text-neutral-300">
+                <span class="flex items-center gap-2"
+                  ><iconify-icon icon="logos:wordpress-icon" width="14"></iconify-icon> WordPress</span
+                >
+                <span class="text-neutral-500">CMS / Plugins</span>
+              </li>
+              <li class="flex items-center justify-between text-xs text-neutral-300">
+                <span class="flex items-center gap-2"
+                  ><iconify-icon icon="lucide:zap" width="14" class="text-yellow-400"></iconify-icon> Performance
+                  (SEO)</span
+                >
+                <span class="text-neutral-500">Core Vitals</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="px-6 md:px-12 lg:px-20 py-20 border-t border-white/5">
+        <div class="flex items-end justify-between mb-12 reveal">
+          <div>
+            <h2 class="text-2xl font-medium text-white tracking-tight mb-2">Recent Projects</h2>
+            <p class="text-sm text-neutral-400">A selection of my recent work.</p>
+          </div>
+          <a
+            href="https://github.com/roybenaviv"
+            target="_blank"
+            class="hidden md:flex items-center gap-2 text-xs font-medium text-white bg-white/5 border border-white/10 px-4 py-2 rounded-full hover:bg-white/10 transition-colors">
+            View GitHub <iconify-icon icon="lucide:arrow-right" width="12"></iconify-icon>
+          </a>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-6">
+          <div
+            class="glass-card rounded-2xl overflow-hidden group flex flex-col reveal"
+            style="transition-delay: 200ms">
+            <div class="relative h-48 bg-neutral-900 overflow-hidden">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
+              <img
+                src="https://eswlab.com/wp-content/uploads/2024/11/esl-icon-300x300.png"
+                alt="Engineering Software Lab"
+                class="w-full opacity-70 group-hover:scale-105 transition-transform duration-700 bg-white" />
+              <div class="absolute bottom-4 left-6 z-20 flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-green-500"></span>
+                <span class="text-[10px] font-medium text-green-400 uppercase tracking-wide">Live</span>
+              </div>
+            </div>
+            <div class="p-6 flex flex-col flex-grow">
+              <h3 class="text-lg text-white font-medium mb-2">Engineering Software Lab</h3>
+              <p class="text-xs text-neutral-400 leading-relaxed mb-4 flex-grow">
+                Corporate website for Engineering Software Lab.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="text-[10px] text-neutral-500 border border-white/5 px-2 py-1 rounded bg-neutral-900 flex items-center gap-1">
+                  <iconify-icon icon="logos:wordpress-icon" width="10"></iconify-icon> WordPress
+                </span>
+              </div>
+              <a
+                href="https://eswlab.com/"
+                target="_blank"
+                class="text-white text-xs font-medium flex items-center gap-2 hover:text-indigo-400 transition-colors mt-auto">
+                Visit Website <iconify-icon icon="lucide:arrow-up-right" width="12"></iconify-icon>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="glass-card rounded-2xl overflow-hidden group flex flex-col reveal"
+            style="transition-delay: 300ms">
+            <div class="relative h-48 bg-neutral-900 overflow-hidden">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
+              <img
+                src="https://scontent.furt2-1.fna.fbcdn.net/v/t39.30808-6/605475528_122105145921179161_2304348243214188754_n.png?_nc_cat=100&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=ZySEK5FCOHcQ7kNvwGb13AT&_nc_oc=Adl2JEsH9XAns0mNatCNKtClwGyKQNWG_VbH4qDLSj3hX5_-MQRYgexj8WzS-TLERN10m2DDjXcbOulw9ax7Acd7&_nc_zt=23&_nc_ht=scontent.furt2-1.fna&_nc_gid=Ow2g4ul2YXTOQSEsHIRLkQ&oh=00_AfpeXr7DihLQNfIO3ZqRbJh9dlRB1JbfIl2SUxQkgw-vVw&oe=69723A93"
+                alt="Webtek"
+                class="w-full h-full object-cover opacity-70 group-hover:scale-105 transition-transform duration-700" />
+              <div class="absolute bottom-4 left-6 z-20 flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-green-500"></span>
+                <span class="text-[10px] font-medium text-green-400 uppercase tracking-wide">Live</span>
+              </div>
+            </div>
+            <div class="p-6 flex flex-col flex-grow">
+              <h3 class="text-lg text-white font-medium mb-2">Webtek - Digital Solutions</h3>
+              <p class="text-xs text-neutral-400 leading-relaxed mb-4 flex-grow">
+                Digital agency portfolio focusing on high performance.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="text-[10px] text-neutral-500 border border-white/5 px-2 py-1 rounded bg-neutral-900 flex items-center gap-1">
+                  <iconify-icon icon="logos:react" width="10"></iconify-icon> React 19
+                </span>
+                <span
+                  class="text-[10px] text-neutral-500 border border-white/5 px-2 py-1 rounded bg-neutral-900 flex items-center gap-1">
+                  <iconify-icon icon="logos:nodejs-icon" width="10"></iconify-icon> Node.js
+                </span>
+                <span
+                  class="text-[10px] text-neutral-500 border border-white/5 px-2 py-1 rounded bg-neutral-900 flex items-center gap-1">
+                  <iconify-icon icon="logos:docker" width="10"></iconify-icon> Docker
+                </span>
+                <span class="text-[10px] text-neutral-500 border border-white/5 px-2 py-1 rounded bg-neutral-900"
+                  >SEO</span
+                >
+              </div>
+              <a
+                href="https://www.webtek.co.il/"
+                target="_blank"
+                class="text-white text-xs font-medium flex items-center gap-2 hover:text-indigo-400 transition-colors mt-auto">
+                Visit Website <iconify-icon icon="lucide:arrow-up-right" width="12"></iconify-icon>
+              </a>
+            </div>
+          </div>
+          <div
+            class="glass-card rounded-2xl overflow-hidden group flex flex-col reveal"
+            style="transition-delay: 400ms">
+            <div class="relative h-48 bg-neutral-900 overflow-hidden">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
+              <img
+                src="https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?q=80&amp;w=1000&amp;auto=format&amp;fit=crop"
+                alt="Netflix Clone"
+                class="w-full h-full object-cover opacity-70 group-hover:scale-105 transition-transform duration-700" />
+              <div class="absolute bottom-4 left-6 z-20 flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-neutral-500"></span>
+                <span class="text-[10px] font-medium text-neutral-400 uppercase tracking-wide">Demo</span>
+              </div>
+            </div>
+            <div class="p-6 flex flex-col flex-grow">
+              <div class="flex items-center gap-2 mb-2">
+                <h3 class="text-lg text-white font-medium">Netflix Clone</h3>
+                <iconify-icon icon="logos:netflix-icon" width="14"></iconify-icon>
+              </div>
+              <p class="text-xs text-neutral-400 leading-relaxed mb-4 flex-grow">
+                A pixel-perfect recreation of the streaming service UI with dynamic content loading.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="text-[10px] text-neutral-500 border border-white/5 px-2 py-1 rounded bg-neutral-900 flex items-center gap-1">
+                  <iconify-icon icon="logos:react" width="10"></iconify-icon> React
+                </span>
+                <span
+                  class="text-[10px] text-neutral-500 border border-white/5 px-2 py-1 rounded bg-neutral-900 flex items-center gap-1">
+                  <iconify-icon icon="logos:firebase" width="10"></iconify-icon> Firebase
+                </span>
+              </div>
+              <a
+                href="https://netclone-roybenaviv.vercel.app/#/"
+                target="_blank"
+                class="text-white text-xs font-medium flex items-center gap-2 hover:text-indigo-400 transition-colors mt-auto">
+                Visit Website <iconify-icon icon="lucide:arrow-up-right" width="12"></iconify-icon>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="glass-card rounded-2xl overflow-hidden group flex flex-col reveal"
+            style="transition-delay: 100ms">
+            <div class="relative h-48 bg-neutral-900 overflow-hidden">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
+              <img
+                src="https://webtek.co.il/assets/il-keys-ad-D1BNgPwU.avif"
+                alt="Netflix Clone"
+                class="w-full object-cover opacity-70 group-hover:scale-105 transition-transform duration-700" />
+              <div class="absolute bottom-4 left-6 z-20 flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-green-500"></span>
+                <span class="text-[10px] font-medium text-green-400 uppercase tracking-wide">Live</span>
+              </div>
+            </div>
+            <div class="p-6 flex flex-col flex-grow">
+              <h3 class="text-lg text-white font-medium mb-2">IL-Keys Store</h3>
+              <p class="text-xs text-neutral-400 leading-relaxed mb-4 flex-grow">
+                A fully functional e-commerce platform for digital games and software.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="text-[10px] text-neutral-500 border border-white/5 px-2 py-1 rounded bg-neutral-900"
+                  >E-Commerce</span
+                >
+                <span
+                  class="text-[10px] text-neutral-500 border border-white/5 px-2 py-1 rounded bg-neutral-900 flex items-center gap-1">
+                  <iconify-icon icon="logos:shopify" width="10"></iconify-icon> Shopify
+                </span>
+              </div>
+              <span class="text-white/50 text-xs font-medium flex items-center gap-2 mt-auto cursor-not-allowed">
+                Internal Demo
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="contact"
+        class="px-6 md:px-12 lg:px-20 py-20 border-t border-white/5 bg-gradient-to-b from-transparent to-indigo-950/20">
+        <div class="text-center mb-12 space-y-4 reveal">
+          <div
+            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[10px] font-medium text-neutral-400 uppercase tracking-widest">
+            Let's Connect
+          </div>
+          <h2 class="text-3xl md:text-4xl font-medium text-white tracking-tight">Ready to start a project?</h2>
+          <p class="text-neutral-400 text-sm max-w-md mx-auto">
+            Whether you have a specific project in mind or just want to explore potential collaboration, feel free to
+            reach out.
+          </p>
+        </div>
+
+        <div class="flex flex-col md:flex-row justify-center gap-6">
+          <a
+            href="mailto:roybenavivv@gmail.com"
+            class="glass-card p-6 rounded-2xl flex items-center gap-4 min-w-[300px] hover:bg-white/5 transition-colors group reveal"
+            style="transition-delay: 100ms">
+            <div
+              class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white group-hover:scale-110 transition-transform">
+              <iconify-icon icon="lucide:mail" width="20"></iconify-icon>
+            </div>
+            <div>
+              <p class="text-xs text-neutral-500 uppercase tracking-wider">Email Me</p>
+              <p class="text-white font-medium">roybenavivv@gmail.com</p>
+            </div>
+          </a>
+
+          <a
+            href="tel:+972547078503"
+            class="glass-card p-6 rounded-2xl flex items-center gap-4 min-w-[300px] hover:bg-white/5 transition-colors group reveal"
+            style="transition-delay: 200ms">
+            <div
+              class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white group-hover:scale-110 transition-transform">
+              <iconify-icon icon="lucide:phone" width="20"></iconify-icon>
+            </div>
+            <div>
+              <p class="text-xs text-neutral-500 uppercase tracking-wider">Call Me</p>
+              <p class="text-white font-medium">+972 54-7078503</p>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <footer class="px-6 md:px-12 lg:px-20 py-8 border-t border-white/5 bg-black/40">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+          <div class="flex items-center gap-2">
+            <span class="text-white font-semibold text-sm tracking-tight">Roy Ben Aviv</span>
+            <span class="text-xs text-neutral-500">© 2026. All rights reserved.</span>
+          </div>
+          <div class="flex items-center gap-6">
+            <a
+              href="https://github.com/roybenaviv"
+              target="_blank"
+              class="text-xs text-neutral-500 hover:text-white transition-colors"
+              >GitHub</a
+            >
+            <a
+              href="https:/linkedin.com/in/roy-ben-aviv/"
+              target="_blank"
+              class="text-xs text-neutral-500 hover:text-white transition-colors"
+              >LinkedIn</a
+            >
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <script>
+      // Reveal on Scroll Logic
+      const observerOptions = {
+        threshold: 0.15,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("active");
+            observer.unobserve(entry.target); // Reveal only once
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+    </script>
+  </body>
+</html>
