@@ -7,6 +7,31 @@
     <meta
       name="description"
       content="Portfolio of Roy Ben Aviv, a Full-Stack Developer specializing in modern web applications, e-commerce, and AI integration." />
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Roy Ben Aviv - Full-Stack Developer" />
+    <meta property="og:description" content="Full-Stack Developer with 4+ years of experience building scalable web apps, e-commerce, and AI-powered products." />
+    <meta property="og:image" content="https://avatars.githubusercontent.com/u/91695939?v=4" />
+    <meta property="og:url" content="https://roybenaviv.dev" />
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Roy Ben Aviv - Full-Stack Developer" />
+    <meta name="twitter:description" content="Full-Stack Developer with 4+ years of experience building scalable web apps, e-commerce, and AI-powered products." />
+    <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/91695939?v=4" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Roy Ben Aviv",
+      "jobTitle": "Full-Stack Developer",
+      "url": "https://roybenaviv.dev",
+      "email": "roybenavivv@gmail.com",
+      "sameAs": [
+        "https://github.com/roybenaviv",
+        "https://linkedin.com/in/roy-ben-aviv"
+      ]
+    }
+    </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     <link
@@ -75,6 +100,17 @@
         }
       }
 
+      /* Typewriter cursor */
+      .typewriter-cursor::after {
+        content: '|';
+        animation: blink 0.7s step-end infinite;
+        color: #818cf8;
+        margin-left: 2px;
+      }
+      @keyframes blink {
+        50% { opacity: 0; }
+      }
+
       /* --- Scroll Reveal Animations --- */
       .reveal {
         opacity: 0;
@@ -117,11 +153,18 @@
             <iconify-icon icon="lucide:arrow-right" width="14" stroke-width="2"></iconify-icon>
           </a>
 
-          <button class="md:hidden text-white p-2">
+          <button id="menu-btn" class="md:hidden text-white p-2">
             <iconify-icon icon="lucide:menu" width="24"></iconify-icon>
           </button>
         </div>
       </nav>
+      <div id="mobile-menu" class="hidden md:hidden border-t border-white/5 bg-neutral-950/90 backdrop-blur-xl px-6 py-4 space-y-1 sticky top-[57px] z-40">
+        <a href="#about" class="block text-sm text-neutral-400 hover:text-white transition-colors py-2">About</a>
+        <a href="#specialties" class="block text-sm text-neutral-400 hover:text-white transition-colors py-2">Specialties</a>
+        <a href="#stack" class="block text-sm text-neutral-400 hover:text-white transition-colors py-2">Tech Stack</a>
+        <a href="#projects" class="block text-sm text-neutral-400 hover:text-white transition-colors py-2">Projects</a>
+        <a href="#contact" class="block text-sm font-medium text-white bg-white/10 px-4 py-2 rounded-full text-center mt-2">Contact Me</a>
+      </div>
 
       <section class="relative pt-24 pb-20 px-6 md:px-12 lg:px-20 overflow-hidden">
         <div
@@ -142,11 +185,11 @@
             <div class="space-y-4">
               <h1 class="text-5xl md:text-7xl font-medium text-white tracking-tight leading-[1.1]">
                 Building Scalable <br />
-                <span class="text-neutral-500">Digital Products.</span>
+                <span class="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">Digital Products.</span>
               </h1>
               <p class="text-lg text-neutral-400 max-w-lg font-light leading-relaxed">
-                I'm Roy Ben Aviv, a Full-Stack Developer with 4+ years of experience. I bridge the gap between strict
-                logic and fluid creativity to build high-performance web applications.
+                I'm Roy Ben Aviv — Full-Stack Developer with 4+ years shipping real products.
+                I build across the full stack: React &amp; Next.js frontends, Node.js backends, AI integrations, and everything in between.
               </p>
             </div>
 
@@ -173,6 +216,18 @@
               </a>
             </div>
 
+            <div class="flex flex-wrap gap-6 pt-4 text-xs text-neutral-400">
+              <div class="flex flex-col gap-0.5">
+                <span class="text-white font-semibold text-lg">4+</span>
+                <span>Years Experience</span>
+              </div>
+              <div class="w-px bg-white/10 self-stretch"></div>
+              <div class="flex flex-col gap-0.5">
+                <span class="text-white font-semibold text-lg">20+</span>
+                <span>Projects Delivered</span>
+              </div>
+            </div>
+
             <div class="flex items-center gap-6 pt-6 border-t border-white/5 text-xs text-neutral-500 font-mono">
               <div class="flex items-center gap-2">
                 <iconify-icon icon="lucide:map-pin" class="text-neutral-400"></iconify-icon>
@@ -193,7 +248,7 @@
               <img
                 src="https://avatars.githubusercontent.com/u/91695939?v=4"
                 alt="Roy Ben Aviv"
-                class="object-cover w-full h-full opacity-90 group-hover:scale-105 transition-transform duration-700 scale hover:scale-0" />
+                class="object-cover w-full h-full opacity-90 group-hover:scale-105 transition-transform duration-700" />
               <div class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/90 to-transparent">
                 <div
                   class="glass-panel p-3 rounded-xl border border-white/10 flex items-center justify-between backdrop-blur-md">
@@ -212,13 +267,12 @@
       </section>
 
       <section id="about" class="px-6 md:px-12 lg:px-20 py-20 border-t border-white/5 bg-white/[0.02]">
-        <div class="max-w-3xl mx-auto text-center space-y-6 reveal">
+        <div class="max-w-3xl mx-auto text-center space-y-4 reveal">
           <h2 class="text-2xl font-medium text-white tracking-tight">Professional Summary</h2>
-          <p class="text-neutral-400 leading-relaxed font-light text-base md:text-lg">
-            Full-Stack Developer with 4+ years of experience building modern, scalable, and high-performance web
-            applications. Experienced in taking products from concept to production, optimizing performance, and
-            creating clean, maintainable code. Strong problem-solver with a passion for modern UI/UX, automation, and
-            emerging technologies.
+          <p id="typewriter-line" class="text-white font-medium text-base md:text-lg tracking-tight min-h-[1.75rem]"></p>
+          <p id="typewriter-sub" class="text-neutral-400 leading-relaxed font-light text-xs md:text-sm max-w-2xl mx-auto opacity-0 transition-opacity duration-700">
+            React &amp; Next.js on the front. Node.js, PostgreSQL, and cloud infrastructure on the back.
+            AI integrations, e-commerce, and SaaS — I've shipped across industries and stayed hands-on throughout.
           </p>
         </div>
       </section>
@@ -229,7 +283,7 @@
           <p class="text-sm text-neutral-400">Areas where I deliver the most value.</p>
         </div>
 
-        <div class="grid md:grid-cols-3 gap-6">
+        <div class="grid md:grid-cols-2 gap-6">
           <div class="glass-card p-8 rounded-2xl relative overflow-hidden group reveal" style="transition-delay: 100ms">
             <div class="shimmer-bg opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
             <div class="relative z-10 space-y-4">
@@ -271,6 +325,21 @@
               <p class="text-sm text-neutral-400 leading-relaxed">
                 End-to-end development from frontend interfaces to backend logic, APIs, and databases. Focused on
                 performance, scalability, and clean component-driven architecture.
+              </p>
+            </div>
+          </div>
+
+          <div class="glass-card p-8 rounded-2xl relative overflow-hidden group reveal" style="transition-delay: 400ms">
+            <div class="shimmer-bg opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+            <div class="relative z-10 space-y-4">
+              <div
+                class="w-12 h-12 rounded-xl bg-indigo-500/10 flex items-center justify-center text-indigo-400 border border-indigo-500/20">
+                <iconify-icon icon="lucide:brain-circuit" width="24" stroke-width="1.5"></iconify-icon>
+              </div>
+              <h3 class="text-white font-medium text-lg">AI & Automation</h3>
+              <p class="text-sm text-neutral-400 leading-relaxed">
+                Not just AI integrations — AI as a core product feature. From LLM-powered CV scoring engines to
+                automated job scraping pipelines. I build systems where AI does real work.
               </p>
             </div>
           </div>
@@ -319,6 +388,11 @@
                   ><iconify-icon icon="logos:tailwindcss-icon" width="14"></iconify-icon> Tailwind CSS</span
                 >
                 <span class="text-neutral-500">Design Systems</span>
+              </li>
+              <li class="flex items-center justify-between text-xs text-neutral-300">
+                <span class="flex items-center gap-2"
+                  ><iconify-icon icon="lucide:component" width="14" class="text-neutral-300"></iconify-icon> shadcn/ui</span
+                >
               </li>
             </ul>
           </div>
@@ -380,13 +454,23 @@
                   ><iconify-icon icon="lucide:git-branch" width="14"></iconify-icon> Git &amp; GitHub</span
                 >
               </li>
+              <li class="flex items-center justify-between text-xs text-neutral-300">
+                <span class="flex items-center gap-2"
+                  ><svg width="14" height="14" viewBox="0 0 24 24" fill="#D97757" xmlns="http://www.w3.org/2000/svg"><path d="M12 1L13.9 7.4L19.8 4.2L16.6 10.1L23 12L16.6 13.9L19.8 19.8L13.9 16.6L12 23L10.1 16.6L4.2 19.8L7.4 13.9L1 12L7.4 10.1L4.2 4.2L10.1 7.4Z"/></svg> Claude Code</span
+                >
+              </li>
+              <li class="flex items-center justify-between text-xs text-neutral-300">
+                <span class="flex items-center gap-2"
+                  ><iconify-icon icon="simple-icons:cursor" width="14" class="text-neutral-300"></iconify-icon> Cursor</span
+                >
+              </li>
             </ul>
           </div>
 
           <div class="glass-card p-6 rounded-2xl border border-white/5 reveal" style="transition-delay: 400ms">
             <div class="flex items-center gap-3 mb-6 pb-4 border-b border-white/5">
               <iconify-icon icon="lucide:shopping-cart" class="text-orange-400" width="20"></iconify-icon>
-              <h3 class="text-white font-medium text-sm">E-Commerce &amp; SEO</h3>
+              <h3 class="text-white font-medium text-sm">E-Commerce, SEO &amp; GEO</h3>
             </div>
             <ul class="space-y-3">
               <li class="flex items-center justify-between text-xs text-neutral-300">
@@ -408,6 +492,18 @@
                 >
                 <span class="text-neutral-500">Core Vitals</span>
               </li>
+              <li class="flex items-center justify-between text-xs text-neutral-300">
+                <span class="flex items-center gap-2"
+                  ><iconify-icon icon="lucide:code-xml" width="14" class="text-violet-400"></iconify-icon> Schema Markup</span
+                >
+                <span class="text-neutral-500">Structured Data</span>
+              </li>
+              <li class="flex items-center justify-between text-xs text-neutral-300">
+                <span class="flex items-center gap-2"
+                  ><iconify-icon icon="lucide:sparkles" width="14" class="text-indigo-400"></iconify-icon> GEO</span
+                >
+                <span class="text-neutral-500">AI Visibility</span>
+              </li>
             </ul>
           </div>
         </div>
@@ -417,7 +513,7 @@
         <div class="flex items-end justify-between mb-12 reveal">
           <div>
             <h2 class="text-2xl font-medium text-white tracking-tight mb-2">Recent Projects</h2>
-            <p class="text-sm text-neutral-400">A selection of my recent work.</p>
+            <p class="text-sm text-neutral-400">A selection of projects I've built and shipped.</p>
           </div>
           <a
             href="https://github.com/roybenaviv"
@@ -428,6 +524,50 @@
         </div>
 
         <div class="grid md:grid-cols-2 gap-6">
+
+          <!-- JOBVIAN — Featured card (full width) -->
+          <div class="glass-card rounded-2xl overflow-hidden group flex flex-col md:flex-row reveal md:col-span-2" style="transition-delay: 100ms">
+            <div class="relative md:w-72 h-52 bg-[#030712] overflow-hidden flex-shrink-0">
+              <img
+                src="./jobvian.png"
+                alt="JOBVIAN"
+                class="absolute inset-0 w-full h-full object-contain p-8 opacity-95 group-hover:scale-105 transition-transform duration-700" />
+              <div class="absolute bottom-4 left-6 z-20 flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-green-500"></span>
+                <span class="text-[10px] font-medium text-green-400 uppercase tracking-wide">Live</span>
+              </div>
+            </div>
+            <div class="p-6 flex flex-col flex-grow">
+              <div class="flex items-center gap-2 mb-2">
+                <h3 class="text-lg text-white font-medium">JOBVIAN</h3>
+                <span class="text-[9px] font-medium text-indigo-400 border border-indigo-500/30 bg-indigo-500/10 px-2 py-0.5 rounded-full uppercase tracking-wide">Featured</span>
+              </div>
+              <p class="text-xs text-neutral-400 leading-relaxed mb-4 flex-grow">
+                Full-stack SaaS I designed and built solo. AI-powered CV scoring, automated job scraping via Apify, ATS analysis, Kanban application tracking, and Stripe-based credit billing — shipped end-to-end.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="text-[10px] text-neutral-500 border border-white/5 px-2 py-1 rounded bg-neutral-900 flex items-center gap-1">
+                  <iconify-icon icon="logos:nextjs-icon" width="10" class="invert"></iconify-icon> Next.js 15
+                </span>
+                <span class="text-[10px] text-neutral-500 border border-white/5 px-2 py-1 rounded bg-neutral-900 flex items-center gap-1">
+                  <iconify-icon icon="logos:openai-icon" width="10"></iconify-icon> OpenAI
+                </span>
+                <span class="text-[10px] text-neutral-500 border border-white/5 px-2 py-1 rounded bg-neutral-900 flex items-center gap-1">
+                  <iconify-icon icon="logos:stripe" width="10"></iconify-icon> Stripe
+                </span>
+                <span class="text-[10px] text-neutral-500 border border-white/5 px-2 py-1 rounded bg-neutral-900 flex items-center gap-1">
+                  <iconify-icon icon="logos:postgresql" width="10"></iconify-icon> PostgreSQL
+                </span>
+              </div>
+              <a
+                href="https://jobvian.com/"
+                target="_blank"
+                class="text-white text-xs font-medium flex items-center gap-2 hover:text-indigo-400 transition-colors mt-auto">
+                Visit Website <iconify-icon icon="lucide:arrow-up-right" width="12"></iconify-icon>
+              </a>
+            </div>
+          </div>
+
           <div
             class="glass-card rounded-2xl overflow-hidden group flex flex-col reveal"
             style="transition-delay: 200ms">
@@ -445,7 +585,7 @@
             <div class="p-6 flex flex-col flex-grow">
               <h3 class="text-lg text-white font-medium mb-2">Engineering Software Lab</h3>
               <p class="text-xs text-neutral-400 leading-relaxed mb-4 flex-grow">
-                Corporate website for Engineering Software Lab.
+                Corporate website for Engineering Software Lab, built on WordPress. Showcases technical services and team expertise with a custom theme.
               </p>
               <div class="flex flex-wrap gap-2 mb-4">
                 <span
@@ -465,12 +605,11 @@
           <div
             class="glass-card rounded-2xl overflow-hidden group flex flex-col reveal"
             style="transition-delay: 300ms">
-            <div class="relative h-48 bg-neutral-900 overflow-hidden">
-              <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
+            <div class="relative h-48 bg-neutral-950 overflow-hidden">
               <img
-                src="https://scontent.furt2-1.fna.fbcdn.net/v/t39.30808-6/605475528_122105145921179161_2304348243214188754_n.png?_nc_cat=100&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=ZySEK5FCOHcQ7kNvwGb13AT&_nc_oc=Adl2JEsH9XAns0mNatCNKtClwGyKQNWG_VbH4qDLSj3hX5_-MQRYgexj8WzS-TLERN10m2DDjXcbOulw9ax7Acd7&_nc_zt=23&_nc_ht=scontent.furt2-1.fna&_nc_gid=Ow2g4ul2YXTOQSEsHIRLkQ&oh=00_AfpeXr7DihLQNfIO3ZqRbJh9dlRB1JbfIl2SUxQkgw-vVw&oe=69723A93"
+                src="./webtek.png"
                 alt="Webtek"
-                class="w-full h-full object-cover opacity-70 group-hover:scale-105 transition-transform duration-700" />
+                class="absolute inset-0 w-full h-full object-contain p-4 opacity-95 group-hover:scale-105 transition-transform duration-700" />
               <div class="absolute bottom-4 left-6 z-20 flex items-center gap-2">
                 <span class="w-2 h-2 rounded-full bg-green-500"></span>
                 <span class="text-[10px] font-medium text-green-400 uppercase tracking-wide">Live</span>
@@ -479,7 +618,7 @@
             <div class="p-6 flex flex-col flex-grow">
               <h3 class="text-lg text-white font-medium mb-2">Webtek - Digital Solutions</h3>
               <p class="text-xs text-neutral-400 leading-relaxed mb-4 flex-grow">
-                Webtek builds fast, clear, results-driven websites that help serious businesses grow.
+                Built Webtek's full web presence from scratch — React 19 frontend, Node.js backend, Dockerized deployment, and SEO optimization. A live agency site I own and operate.
               </p>
               <div class="flex flex-wrap gap-2 mb-4">
                 <span
@@ -554,8 +693,8 @@
               <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
               <img
                 src="https://webtek.co.il/assets/il-keys-ad-D1BNgPwU.avif"
-                alt="Netflix Clone"
-                class="w-full object-cover opacity-70 group-hover:scale-105 transition-transform duration-700" />
+                alt="IL-Keys Store"
+                class="w-full h-full object-cover opacity-70 group-hover:scale-105 transition-transform duration-700" />
               <div class="absolute bottom-4 left-6 z-20 flex items-center gap-2">
                 <span class="w-2 h-2 rounded-full bg-neutral-500"></span>
                 <span class="text-[10px] font-medium text-neutral-400 uppercase tracking-wide">Demo</span>
@@ -564,7 +703,7 @@
             <div class="p-6 flex flex-col flex-grow">
               <h3 class="text-lg text-white font-medium mb-2">IL-Keys Store</h3>
               <p class="text-xs text-neutral-400 leading-relaxed mb-4 flex-grow">
-                A fully functional e-commerce platform for digital games and software.
+                Founded and ran IL-Keys — an e-commerce store for digital game keys. Built the Shopify store, custom theme, and automated delivery from the ground up. Operated profitably from 2021–2022.
               </p>
               <div class="flex flex-wrap gap-2 mb-4">
                 <span class="text-[10px] text-neutral-500 border border-white/5 px-2 py-1 rounded bg-neutral-900"
@@ -591,10 +730,10 @@
             class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[10px] font-medium text-neutral-400 uppercase tracking-widest">
             Let's Connect
           </div>
-          <h2 class="text-3xl md:text-4xl font-medium text-white tracking-tight">Ready to start a project?</h2>
+          <h2 class="text-3xl md:text-4xl font-medium text-white tracking-tight">Let's Build Something.</h2>
           <p class="text-neutral-400 text-sm max-w-md mx-auto">
-            Whether you have a specific project in mind or just want to explore potential collaboration, feel free to
-            reach out.
+            Open to full-time roles, freelance projects, and consulting opportunities.
+            I usually respond within 24 hours.
           </p>
         </div>
 
@@ -643,10 +782,10 @@
               >GitHub</a
             >
             <a
-              href="https:/linkedin.com/in/roy-ben-aviv"
+              href="https://linkedin.com/in/roy-ben-aviv"
               target="_blank"
               class="text-xs text-neutral-500 hover:text-white transition-colors"
-              >LinkedIn</a
+              >LinkedIn</
             >
           </div>
         </div>
@@ -654,6 +793,48 @@
     </main>
 
     <script>
+      // Typewriter animation for Professional Summary
+      function typeWriter(el, text, onDone) {
+        let i = 0;
+        el.classList.add('typewriter-cursor');
+        const tick = () => {
+          if (i < text.length) {
+            el.textContent += text[i];
+            const c = text[i++];
+            const delay = /[.!?]/.test(c) ? 150 : /[,;—–]/.test(c) ? 60 : Math.random() * 12 + 6;
+            setTimeout(tick, delay);
+          } else {
+            el.classList.remove('typewriter-cursor');
+            if (onDone) onDone();
+          }
+        };
+        tick();
+      }
+      const aboutSection = document.getElementById('about');
+      const twObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const line = document.getElementById('typewriter-line');
+            const sub = document.getElementById('typewriter-sub');
+            typeWriter(line, 'Full-Stack Developer — I build products that scale, ship, and last.', () => {
+              sub.style.opacity = '1';
+            });
+            twObserver.unobserve(aboutSection);
+          }
+        });
+      }, { threshold: 0.4 });
+      twObserver.observe(aboutSection);
+
+      // Mobile menu toggle
+      const menuBtn = document.getElementById('menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+      mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+      });
+
       // Reveal on Scroll Logic
       const observerOptions = {
         threshold: 0.15,
